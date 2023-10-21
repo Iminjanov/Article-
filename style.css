@@ -11,6 +11,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+*:focus{
+  outline: 2px dashed #1e90ff;
+outline-offset: 2px;
+}
 
 body {
   display: flex;
@@ -19,8 +23,9 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   background-color: #fff;
   color: #222;
 }
@@ -63,6 +68,7 @@ img {
 .hero {
   display: flex;
   justify-content: center;
+  padding: 24px;
   align-items: center;
   width: 100%;
   max-width: 600px;
@@ -78,16 +84,27 @@ img {
   margin-bottom: 24px;
   font-size: 24px;
   color: #fff;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
   letter-spacing: 2px;
   line-height: auto;
+  font-weight: 400;
   text-transform: uppercase;
 }
 .hero-link {
   text-decoration: none;
   display: inline-block;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
   color: #fff;
   letter-spacing: 2px;
   background-color: #1e90ff;
+}
+
+.hero-link:hover {
+  background-color: rgba(30, 144, 255, 0.8);
+}
+
+.hero-link:active {
+  background-color: rgba(30, 144, 255, 0.6);
 }
 
 .hero-link-inner::before {
@@ -104,4 +121,148 @@ img {
 .hero-link-inner {
   display: flex;
   padding: 12px 24px;
+}
+
+.latest-videos {
+  padding: 54px;
+  width: 100%;
+  max-width: 600px;
+}
+.latest-videos-heading {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.latest-videos-divider {
+  border: 0;
+  height: 1px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: #999;
+}
+.latest-videos-list {
+  list-style: NONE;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+}
+.latest-videos-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ITEM LATEST VIDEOS */
+
+.item-latest-videos {
+  display: flex;
+}
+.item-latest-videos-img {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.item-latest-videos-info {
+  padding: 16px;
+}
+.item-latest-videos-heading {
+  margin-top: 0px;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 400;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+.item-latest-videos-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #222222;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
+}
+
+.item-latest-videos-link:hover {
+  color: rgba(30, 144, 255, 1);
+}
+
+.item-latest-videos-link:active {
+  color: rgba(30, 144, 255, 0.6);
+}
+
+.item-latest-video-meta {
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-published-at {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+  color: #888888;
+}
+
+.item-latest-videos-published-at::before {
+  width: 16px;
+  height: 16px;
+  background-image: url(img/Vectoricons.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 4px;
+  content: "";
+}
+
+.item-latest-videos-views {
+  display: flex;
+  align-items: center;
+  color: #666666;
+  font-size: 14px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.item-latest-videos-views::before {
+  background-image: url(img/Vectoricons.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  content: "";
+}
+
+/* LOAD MORE BUTTON  */
+
+.load-more-button{
+  display: block;
+  border: 0;
+  width: 100%;
+  padding: 12px;
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 14px;
+  line-height: normal;
+  cursor: pointer;
+   border-radius: 4px;
+}
+
+.load-more-button:hover{
+  background-color: rgba(30, 144, 255, 0.8);
+}
+ 
+.load-more-button:active{
+  background-color: rgba(30, 144, 255, 0.6);
+
 }
